@@ -1,0 +1,150 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.5s ease-out forwards;
+}
+
+/* Glowing effect for indicators */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.indicator-glow {
+  animation: pulse 2s infinite;
+}
+
+
+/* Adjust the position of navigation arrows */
+.splide__arrow {
+  background-color: #fff;
+  /* Optional: white background for visibility */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Soft shadow */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+
+/* Left Arrow */
+.splide__arrow--prev {
+  left: -2rem;
+  /* Adjust left arrow closer or farther */
+}
+
+/* Right Arrow */
+.splide__arrow--next {
+  right: -2rem;
+  /* Adjust right arrow closer or farther */
+}
+
+/* On hover effect */
+.splide__arrow:hover {
+  opacity: 1;
+  background-color: #f1f1f1;
+}
+
+/* sign in modal */
+.model-bouncing {
+  animation: ping 0.01s ease-out forwards;
+}
+
+
+@keyframes ping {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+body.hidden-scroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+
+    /* Custom styles for sliding nav */
+    .nav-slide {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+    .nav-slide.active {
+      transform: translateX(0);
+    }
+
+    .nav-slide {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .nav-slide.active {
+      transform: translateX(0);
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .pointer-events-none {
+      pointer-events: none;
+    }
+    
+    #overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    #overlay.active {
+      display: block;
+    }
+    
+    .overflow-hidden {
+      overflow: hidden;
+    }
+    

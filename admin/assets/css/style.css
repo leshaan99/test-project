@@ -1,0 +1,34 @@
+
+ 
+.card {
+    background-color: transparent;
+    border-color: black;
+
+}
+
+.bg {
+
+
+    background-image: url(../img/Bg\ Cover.jpg);
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+}
+
+.bg-card{
+    background-color: #ffffff
+
+}
+
+body,
+html {
+    height: 100%;
+}
