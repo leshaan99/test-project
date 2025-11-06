@@ -1,4 +1,4 @@
-name: Deploy to AWS EC2
+name: Deploy on Self-Hosted EC2
 
 on:
   push:
@@ -7,20 +7,15 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy to EC2
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            cd /var/www/html
-            sudo git pull origin main
-            sudo systemctl restart apache2
-            echo "Deployment completed!"
+      - name: Deploy App
+        run: |
+          cd /var/www/html
+          sudo git pull origin main
+          sudo systemctl restart apache2
+          echo "✅ Deployment completed successfully"
