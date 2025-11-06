@@ -14,9 +14,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy App
-        run: cd /var/www/html
-      - name: connect to github
         run: |
-             sudo git pull origin main
-             sudo systemctl restart apache2
-             echo "✅ Deployment completed successfully"
+              cd /var/www/html
+              sudo git pull origin main
+              sudo systemctl restart apache2
+              echo "✅ Deployment completed successfully"
