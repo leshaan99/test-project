@@ -15,6 +15,7 @@ jobs:
 
       - name: Deploy App
         run: |
+          sudo -i
           cd /var/www/html
           sudo git pull origin main
           sudo systemctl restart apache2
