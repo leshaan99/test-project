@@ -17,7 +17,7 @@ $blogs = $blog->get_all()['error'] === null ? $blog->get_all()['data'] : [];
     <section class="py-12">
         <div class="flex justify-center">
             <div class="container mx-auto text-center">
-                <h1 class="text-3xl font-bold text-gray-800">Read Our Latest BLogs</h1>
+                <h1 class="text-3xl font-bold text-gray-800">Read Our Latest Blogs</h1>
                 <p class="text-gray-600 mt-2">Our blogs will help you with everything you want to know about studying abroad</p>
 
                 <?php if (!empty($blogs)) { ?>
