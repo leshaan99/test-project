@@ -13,9 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Deploy Application
+      - name: Force update from GitHub
         run: |
           cd /var/www/html
+          git reset --hard
           git pull origin main
           sudo systemctl restart apache2
           echo "✅ Deployment completed successfully"
