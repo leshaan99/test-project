@@ -16,6 +16,6 @@ jobs:
       - name: Deploy Application
         run: |
           cd /var/www/html
-          sudo git pull origin main
+          git pull origin main
           sudo systemctl restart apache2
           echo "✅ Deployment completed successfully"
